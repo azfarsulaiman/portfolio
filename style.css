@@ -1,17 +1,24 @@
 
 nav{
     display: flex;
-    text-decoration: none
+    .current-home{
+        flex: 1
+    }
+    ul{
+        display: contents
+        color: inherit;
+        text-align: center
+        padding: 50em
+    }
+    li{
+        display: contents;
+        text-decoration: none
+        color: inherit;
+        text-align: center
+        padding: 50em
+    }
 }
-ul{
-    display:contents;
 
-}
-
-li{
-    display:contents;
-
-}
 
 h1{
     color: navy
