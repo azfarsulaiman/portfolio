@@ -1,6 +1,36 @@
+
+nav{
+    display: flex;
+    text-decoration: none
+}
+ul{
+    display:contents;
+
+}
+
+li{
+    display:contents;
+
+}
+
+h1{
+    color: navy
+
+    font: 100% system-ui;
+    font-weight: bold;
+}
+
 body {
- /* Set line height to 1.5 times the font size
-    and use the OS’s UI font as the website font
-  */
- font: 100%*1.5 system-ui;
+    /* Set line height to 1.5 times the font size
+       and use the OS’s UI font as the website font
+     */
+    font: 100%/1.5 system-ui;
+    max-width: 75ch;
+    margin-inline: 1em 1em; /* sets both start and end values */
+    padding: 1em;
+
+   }
+   
+img {
+    max-width: 100%;
 }
