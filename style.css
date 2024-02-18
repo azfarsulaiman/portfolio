@@ -1,6 +1,16 @@
+html{
+
+    accent-color: var(--color-accent); /* Apply accent color to all elements */
+    --color-accent: oklch(65% 50% 0); /* Define accent color */
+
+}
+
 
 nav{
-    display: flex;
+    display: flex; /* Apply Flexbox layout */
+    border-bottom: 0.5px solid rgb(128, 128, 128); /* Bottom border to separate from content */
+    margin-bottom: 10px; /* Add margin-bottom to separate from content below */
+
     ul{
         display: contents
     }
@@ -8,16 +18,19 @@ nav{
         display: contents;
     }
 }
-a {
-    flex: 1;
-    text-decoration: none;
-    color: inherit;
-    text-align: center;
-    padding: 0.5 em
+nav a {
+    flex: 1; /* Make all <a> elements take up the same amount of space */
+    text-align: center; /* Center align the text within <a> elements */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Use the same text color as their parent element */
+    padding: 0.5em; /* Add padding to increase clickable area */
+
 }
-nav.current {
-    border-bottom: 0.4em thick oklch(80% 3% 200);
-    padding-bottom: 0.1em
+nav a.current,nav a:hover {
+    border-bottom: 0.3em solid rgb(128, 256, 256); /* Thick bottom border */
+    padding-bottom: 0.1em; /* Reduced padding to counter the increase in height */
+    border-bottom-color: oklch(80% 3% 200);
+    background-color: oklch(from var(--color-accent) 75% 5% h)
 }
 
 h1{
@@ -35,9 +48,32 @@ body {
     max-width: 75ch;
     margin-inline: 1em 1em; /* sets both start and end values */
     padding: 1em;
+    accent-color: var(--color-accent)
 
    }
    
 img {
     max-width: 100%;
+}
+
+.form (
+    font: inherit;
+    display: grid;
+    grid-template-columns: auto 1fr; /* Define columns: label width as wide as content, input field takes up remaining space */
+    gap: 1em; /* Add gap between grid items for spacing */
+)
+.form label{
+    display: grid;
+    grid-template-columns: auto 1fr; /* Define columns: label width as wide as content, input field takes up remaining space */
+    grid-column: 1 / -1;
+}
+.form input,
+.form select,
+.form textarea {
+  width: 100%; /* Make form controls take up the whole width */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.form button {
+  grid-column: 1 / -1; /* Span the whole row */
 }
