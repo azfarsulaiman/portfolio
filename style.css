@@ -1,24 +1,24 @@
 
 nav{
     display: flex;
-    .current-home{
-        flex: 1
-    }
     ul{
         display: contents
-        color: inherit;
-        text-align: center
-        padding: 50em
     }
     li{
         display: contents;
-        text-decoration: none
-        color: inherit;
-        text-align: center
-        padding: 50em
     }
 }
-
+a {
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    padding: 0.5 em
+}
+nav.current {
+    border-bottom: 0.4em thick oklch(80% 3% 200);
+    padding-bottom: 0.1em
+}
 
 h1{
     color: navy
